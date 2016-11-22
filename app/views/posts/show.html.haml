@@ -1,10 +1,13 @@
-%h1= @post.title
-%p= @post.user.name
-%p= @post.link
-%p= @post.description
+%section
+  .content-wrap
+    %h1= @post.title
+    %p= @post.user.name
+    %p
+      =link_to @post.link, "//#{@post.link}", target: "_blank"
+    %p= simple_format h @post.description
 
-- if @post.user == current_user
-  = link_to "Edit Post", edit_post_path(@post)
-  = link_to "destroy", post_path(@post), method: :delete, data: { confirm: "are you sure?" }
+    - if @post.user == current_user
+      = link_to "Edit Post", edit_post_path(@post)
+      = link_to "Destroy", post_path, method: :delete, data: { confirm: "are you sure?" }
 
-= link_to "Home", root_path
+    = link_to "Home", root_path

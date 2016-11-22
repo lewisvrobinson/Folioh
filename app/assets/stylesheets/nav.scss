@@ -1,0 +1,27 @@
+.main-nav {
+  background: #eee;
+  display: flex;
+  padding: 0 2em;
+  flex-flow: row;
+  li {
+    display: inline-block;
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 1em;
+    &:hover {
+      background: darken(#eee, 10%);
+    }
+  }
+
+  &__site-nav {
+    margin-right: auto;
+  }
+
+  &__user-info {
+    margin-left: auto;
+
+  }
+}

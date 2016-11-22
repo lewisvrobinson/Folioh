@@ -1,25 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Folioh</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <nav>
-    <% if user_signed_in? %>
-      Signed in as <strong><%= current_user.name %></strong>
-      <%= link_to "Logout", destroy_user_session_path%>
-    <% else %>
-      <%= link_to "Sign Up", new_user_registration_path %>
-      <%= link_to "Login", new_user_session_path %>
-    <% end%>
-  </nav>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+    <head>
+        <title>Folioh</title>
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+        <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+        <%= csrf_meta_tags %>
+    </head>
+    <body>
+        <nav class="main-nav">
+            <ul class="site-nav">
+                <li>
+                    <%= link_to "FOLIOH", root_path %>
+                </li>
+                <li>
+                    <%= link_to "Posts", posts_url%>
+                </li>
+                <% if user_signed_in? %>
+                <li>
+                    <%= link_to "New Post", new_post_url%>
+                </li>
+                <% end %>
+            </ul>
 
-<%= yield %>
+            <ul class="main-nav__user-info">
 
-</body>
+                <% if user_signed_in? %>
+                <li>
+                    Oh! Hi,
+                    <strong><%= current_user.name %></strong>
+                </li>
+                <li>
+                    <%= link_to "Logout", destroy_user_session_path, :method => :delete %>
+                </li>
+
+            <% else %>
+                <li>
+                    <%= link_to "Sign Up", new_user_registration_path %>
+                </li>
+
+                <li>
+                    <%= link_to "Login", new_user_session_path %>
+                </li>
+
+                <% end%>
+            </ul>
+        </nav>
+        <div class="content-wrap">
+          <p class="notice" style="color: green; font-weight: bold;"><%= notice %></p>
+          <p class="alert" style="color: red; font-weight: bold;"><%= alert %></p>
+        </div>
+        <div class="main-content">
+            <%= yield %>
+        </div>
+    </body>
 </html>

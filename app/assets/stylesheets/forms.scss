@@ -1,0 +1,28 @@
+.simple_form {
+  // max-width: 50%;
+  margin: 0 auto;
+  padding: 1em;
+  background: #eee;
+  .input {
+    padding: .5em 0;
+    display: flex;
+    align-items: center;
+
+  }
+  input,
+  textarea {
+    font-size: 1em;
+    width: 100%;
+    border: 1px solid #aaa;
+    padding: 1em;
+    border-radius: 3px;
+  }
+  label {
+    margin-right: 1em;
+    flex-shrink: 0;
+  }
+  textarea {
+    margin-top: .5em;
+    display: block;
+  }
+}

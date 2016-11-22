@@ -1,6 +1,6 @@
-%h1 This is a placeholder on the #index action.
-
-- @post.each do |post|
-  %h2= link_to post.title, post
-
-= link_to "Add New Post", new_post_path
+%section
+  .posts.content-wrap.flex-grid
+    - @post.each do |post|
+      .post.flex-grid__item.flex-grid__item--50
+        %h2= link_to post.title, post
+        %p= post.user.name
