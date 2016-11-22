@@ -1,5 +1,5 @@
 .main-nav {
-  background: #eee;
+  background: #fff;
   display: flex;
   padding: 0 2em;
   flex-flow: row;
@@ -12,7 +12,7 @@
     color: inherit;
     padding: 1em;
     &:hover {
-      background: darken(#eee, 10%);
+      background: darken(#fff, 10%);
     }
   }
 

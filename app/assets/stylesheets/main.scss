@@ -2,13 +2,17 @@
 //   font-size: calc(10px + 1vw);
 // }
 // moved to typopgraphy.scss
-
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 body {
   font-family: sans-serif;
+  background: #f4f4f4;
 }
 
 .content-wrap {
   margin: 0 auto;
   max-width: 900px;
-  padding: 2em;
 }

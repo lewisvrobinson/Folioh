@@ -3,4 +3,4 @@
     - @post.each do |post|
       .post.flex-grid__item.flex-grid__item--50
         %h2= link_to post.title, post
-        %p= post.user.name
+        %span= post.user.name
