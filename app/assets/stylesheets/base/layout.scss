@@ -1,8 +1,27 @@
+// :root {
+//   font-size: calc(10px + 1vw);
+// }
+// moved to typopgraphy.scss
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  background: #f4f4f4;
+}
+
+.content-wrap {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
 .flex-grid {
   display: flex;
   position: relative;
   flex-direction: row;
-  // flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   &__item {
     flex-grow: 0;

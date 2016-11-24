@@ -40,4 +40,6 @@
 
 body {
   @include responsive-font(1vw, 16px, 30px);
+  font-family: 'Roboto', sans-serif;
+  color: rgba(0,0,0,.78);
 }
