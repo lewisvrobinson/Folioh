@@ -9,13 +9,14 @@
   background: #fff;
   border-radius: $border-radius;
   position: relative;
-  &:hover {
+  a:hover {
     .post-title {
       opacity: 1;
       z-index: 999;
     }
   }
   .post-title {
+    transition: opacity 230ms ease;
     position: absolute;
     opacity: 0;
     margin: 0;
@@ -38,8 +39,5 @@
   a {
     text-decoration: none;
     color: inherit;
-    &:hover {
-      opacity: 0.8;
-    }
   }
 }

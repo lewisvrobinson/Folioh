@@ -21,7 +21,7 @@ body {
 .flex-grid-halves {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   .col {
     width: 50%;
   }
@@ -29,7 +29,7 @@ body {
 .flex-grid-thirds {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: flex-start;
   .col {
     width: 33%;
   }
