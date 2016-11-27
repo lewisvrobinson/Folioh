@@ -1,25 +1,82 @@
+.btn {
+  display: inline-block;
+  padding: .25em .5em;
+  color: #aaa;
+  background: #fff;
+  border: .1em solid transparent;
+  border-radius: .2em;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover, &:focus, {
+    background: #ddd;
+  }
+  &.info {
+    // color: $info;
+    // background: lighten($info, 40%);
+    &:hover, &:focus {
+      color: #fff;
+      background: $info;
+      border-color: $info;
+    }
+  }
+  &.success{
+    // color: $success;
+    // background: lighten($success, 40%);
+    &:hover, &:focus {
+      color: #fff;
+      background: $success;
+      border-color: $success;
+    }
+  }
+  &.warning {
+    // color: $warning;
+    // background: lighten($warning, 40%);
+    &:hover, &:focus {
+      color: #fff;
+      background: $warning;
+      border-color: $warning;
+    }
+  }
+  &.danger {
+    // color: $danger;
+    // background: lighten($danger, 40%);
+    &:hover, &:focus {
+      color: #fff;
+      background: $danger;
+      border-color: $danger;
+    }
+  }
+}
+
+.action-block {
+  padding:1em 0;
+}
+
 .simple_form {
   // max-width: 50%;
   margin: 0 auto;
-  padding: 1em;
-  background: #eee;
+  background: #fff;
   .input {
     padding: .5em 0;
     display: flex;
-    align-items: center;
-
+    align-items: flex-start;
+    flex-direction: column;
   }
-  input,
+  input[type=text],
+  input[type=password],
+  input[type=email],
+  input[type=text],
   textarea {
     font-size: 1em;
     width: 100%;
     border: 1px solid #aaa;
-    padding: 1em;
+    padding: .5em 1em;
     border-radius: 3px;
   }
   label {
     margin-right: 1em;
     flex-shrink: 0;
+    text-align: left;
   }
   textarea {
     margin-top: .5em;

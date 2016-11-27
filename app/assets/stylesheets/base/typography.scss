@@ -38,8 +38,10 @@
   font-size: $responsive;
 }
 
-body {
+body, input {
   @include responsive-font(1vw, 16px, 30px);
   font-family: 'Roboto', sans-serif;
-  color: rgba(0,0,0,.78);
+  color: $base-font-color;
+  line-height: 1.4;
+
 }

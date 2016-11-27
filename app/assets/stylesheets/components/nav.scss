@@ -14,6 +14,10 @@
     &:hover {
       background: darken(#fff, 10%);
     }
+    &.success {
+      background: $success;
+      color: #fff;
+    }
   }
 
   &__site-nav {
