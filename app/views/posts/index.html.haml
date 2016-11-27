@@ -1,6 +1,10 @@
 %section
-  .posts.content-wrap.flex-grid
+  .posts.container.flex-grid-quarters
     - @post.each do |post|
-      .post.flex-grid__item.flex-grid__item--50
-        %h2= link_to post.title, post
-        %span= post.user.name
+      .col
+        .post-panel
+          = link_to post do
+            .post-image
+            %h2.post-title= post.title
+          .post-data
+            %span= post.user.name

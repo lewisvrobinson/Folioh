@@ -1,3 +1,6 @@
+// BRAND //
+$primary: #6ce7e3;
+
 // TYPE //
 $base-font-color: rgba(0,0,0,.78);
 
@@ -6,3 +9,11 @@ $info: #4aeff4;
 $success: #0bc370;
 $warning: #f7bb1f;
 $danger: #f56020;
+
+// GREY //
+$grey-base: #ccc;
+$grey-light: lighten($grey-base, 15%);
+$grey-dark: darken($grey-base, 20%);
+
+// COMPONENTS //
+$border-radius: .2em;

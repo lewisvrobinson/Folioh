@@ -1,5 +1,14 @@
 %section
-  .content-wrap
-    %h1 Edit Post
+  .container
+    .wrapper
+      %h1 Edit Post
 
-    = render 'form'
+      = render 'form'
+
+      .action-block
+        = link_to posts_url, class: "btn"do
+          %i.fa.fa-long-arrow-left
+          back
+        = link_to post_path, method: :delete, data: { confirm: "are you sure?" }, class: "btn danger" do
+          %i.fa.fa-trash
+          delete

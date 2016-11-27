@@ -3,15 +3,38 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.post {
-  padding: 1em;
-  background: #fff;
+.post-panel {
+  padding: 0;
   margin: 1em;
-  border-radius: 0.1em;
-  h2 {
-    margin: 0;
+  background: #fff;
+  border-radius: $border-radius;
+  position: relative;
+  &:hover {
+    .post-title {
+      opacity: 1;
+      z-index: 999;
+    }
   }
-
+  .post-title {
+    position: absolute;
+    opacity: 0;
+    margin: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: .5em;
+    background: rgba(0,0,0, 0.3);
+    color: #fff;
+  }
+  .post-image {
+    height: 10em;
+    background: url('https://cdn1.freshdesignweb.com/wp-content/uploads/2015/07/photographer-portfolio-website-template.jpg') 50% 50% no-repeat;
+    background-size: cover;
+    border-radius: $border-radius $border-radius 0 0;
+  }
+  .post-data {
+    padding: .5em;
+  }
   a {
     text-decoration: none;
     color: inherit;

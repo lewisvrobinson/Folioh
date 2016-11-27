@@ -1,55 +1,65 @@
 .btn {
   display: inline-block;
   padding: .25em .5em;
-  color: #aaa;
-  background: #fff;
+  color: $grey-dark;
+  background: $grey-light;
   border: .1em solid transparent;
   border-radius: .2em;
   text-decoration: none;
+  text-transform: lowercase;
   cursor: pointer;
+  transition: all 230ms ease;
   &:hover, &:focus, {
     background: #ddd;
   }
+
   &.info {
-    // color: $info;
-    // background: lighten($info, 40%);
     &:hover, &:focus {
       color: #fff;
       background: $info;
-      border-color: $info;
+      border-color: darken($info, 5%);
+    }
+    &:active {
+      background: darken($info, 10%);
     }
   }
   &.success{
-    // color: $success;
-    // background: lighten($success, 40%);
     &:hover, &:focus {
       color: #fff;
       background: $success;
-      border-color: $success;
+      border-color: darken($success, 5%);
+    }
+    &:active {
+      background: darken($success, 10%);
     }
   }
   &.warning {
-    // color: $warning;
-    // background: lighten($warning, 40%);
     &:hover, &:focus {
       color: #fff;
       background: $warning;
-      border-color: $warning;
+      border-color: darken($warning, 5%);
+    }
+    &:active {
+      background: darken($warning, 5%);
     }
   }
   &.danger {
-    // color: $danger;
-    // background: lighten($danger, 40%);
     &:hover, &:focus {
       color: #fff;
       background: $danger;
-      border-color: $danger;
+      border-color: darken($danger, 5%);
+    }
+    &:active {
+      background: darken($danger, 10%);
     }
   }
 }
 
 .action-block {
   padding:1em 0;
+  .right {
+    float: right;
+  }
 }
 
 .simple_form {
@@ -67,11 +77,11 @@
   input[type=email],
   input[type=text],
   textarea {
-    font-size: 1em;
     width: 100%;
-    border: 1px solid #aaa;
+    border: none;
     padding: .5em 1em;
     border-radius: 3px;
+    background: $grey-light;
   }
   label {
     margin-right: 1em;

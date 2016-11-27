@@ -5,7 +5,6 @@
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
         <%= csrf_meta_tags %>
-        <% stylesheet_link_tag 'application', '//fonts.googleapis.com/css?family=Roboto' %>
         <script src="https://use.fontawesome.com/8ad03d15b0.js"></script>
     </head>
     <body>
@@ -19,7 +18,7 @@
                 </li>
                 <% if user_signed_in? %>
                 <li>
-                    <%= link_to "New Post", new_post_url, class: "success"%>
+                    <%= link_to "New Post", new_post_url, class: "cta"%>
                 </li>
                 <% end %>
             </ul>
@@ -47,7 +46,7 @@
                 <% end%>
             </ul>
         </nav>
-        <div class="content-wrap">
+        <div class="container">
           <p class="notice" style="color: green; font-weight: bold;"><%= notice %></p>
           <p class="alert" style="color: red; font-weight: bold;"><%= alert %></p>
         </div>

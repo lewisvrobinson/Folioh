@@ -12,10 +12,10 @@
     color: inherit;
     padding: 1em;
     &:hover {
-      background: darken(#fff, 10%);
+      background: #ddd;
     }
-    &.success {
-      background: $success;
+    &.cta {
+      background: $primary;
       color: #fff;
     }
   }

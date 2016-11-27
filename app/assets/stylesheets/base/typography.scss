@@ -38,10 +38,14 @@
   font-size: $responsive;
 }
 
-body, input {
+:root {
   @include responsive-font(1vw, 16px, 30px);
-  font-family: 'Roboto', sans-serif;
+}
+body,
+input,
+textarea {
+  font-size: 1rem;
+  font-family: sans-serif;
   color: $base-font-color;
   line-height: 1.4;
-
 }

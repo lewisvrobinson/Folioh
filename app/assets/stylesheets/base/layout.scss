@@ -8,35 +8,71 @@
   box-sizing: border-box;
 }
 body {
-  font-family: sans-serif;
-  background: #f4f4f4;
+  background: $grey-light;
 }
 
-.content-wrap {
-  margin: 1em auto;
-  max-width: 900px;
-  background: #fff;
-  padding: .5em;
-}
-
+// FLEXBOX - GRID
 .flex-grid {
   display: flex;
-  position: relative;
-  flex-direction: row;
+  .col {
+    flex: 1;
+  }
+}
+.flex-grid-halves {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  &__item {
-    flex-grow: 0;
-    flex-shrink: 1;
-    &--100 { width: 100%; }
-    &--90 { width: 90%; }
-    &--80 { width: 80%; }
-    &--70 { width: 70%; }
-    &--60 { width: 60%; }
-    &--50 { width: 50%; }
-    &--40 { width: 40%; }
-    &--30 { width: 30%; }
-    &--20 { width: 20%; }
-    &--10 { width: 10%; }
+  .col {
+    width: 50%;
   }
+}
+.flex-grid-thirds {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  .col {
+    width: 33%;
+  }
+}
+.flex-grid-quarters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .col {
+    width: 25%;
+  }
+}
+@media (max-width: 400px) {
+  .flex-grid,
+  .flex-grid-thirds {
+    display: block;
+    .col {
+      width: 100%;
+      margin: 0 0 10px 0;
+    }
+  }
+}
+// END ~ FLEXBOX GRID
+
+iframe {
+  border: 0;
+  padding: 2em .5em .5em;
+  width: 100%;
+  height: 500px;
+  background-color: $grey-light;
+  border-radius: .5em;
+  box-shadow: 0.5em 1.5em 0.3em -1em rgba(0, 0, 0, 0.1);
+  // border: 0.1em #ccc solid;
+  overflow: hidden;
+}
+
+.container {
+  margin: 2em auto;
+  max-width: 1200px;
+}
+
+.wrapper {
+  background: #fff;
+  padding: 1em;
+  border-radius: $border-radius;
 }

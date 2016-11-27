@@ -1,21 +1,23 @@
 %section
-  .content-wrap
-    %h1= @post.title
-    %p= @post.user.name
-    %p
-      =link_to @post.link, "//#{@post.link}", target: "_blank"
-    %p= simple_format h @post.description
+  .container
+    .wrapper
+      %h1= @post.title
+      %iframe{:src => "//#{@post.link}"}
+      %p= @post.user.name
+      %p
+        =link_to @post.link, "//#{@post.link}", target: "_blank"
+      %p= simple_format h @post.description
 
-    - if @post.user == current_user
-      .action-block
-        = link_to edit_post_path(@post), class: "btn warning" do
-          %i.fa.fa-pencil
-          edit
-        = link_to post_path, method: :delete, data: { confirm: "are you sure?" }, class: "btn danger" do
-          %i.fa.fa-trash
-          delete
+      - if @post.user == current_user
+        .action-block
+          .right
+            = link_to edit_post_path(@post), class: "btn warning" do
+              %i.fa.fa-pencil
+              edit
+            = link_to post_path, method: :delete, data: { confirm: "are you sure?" }, class: "btn danger" do
+              %i.fa.fa-trash
+              delete
 
-
-    = link_to posts_url, class: "btn"do
-      %i.fa.fa-long-arrow-left
-      back
+          = link_to posts_url, class: "btn"do
+            %i.fa.fa-long-arrow-left
+            back
