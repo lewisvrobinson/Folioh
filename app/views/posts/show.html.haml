@@ -1,7 +1,7 @@
 %section
   .container
-    .flex-grid-halves
-      .col
+    .flex-grid
+      .col-2-3
         .wrapper
           %h1= @post.title
           %iframe{:src => "//#{@post.link}"}
@@ -23,3 +23,7 @@
               = link_to posts_url, class: "btn"do
                 %i.fa.fa-long-arrow-left
                 back
+      .col-1-3
+        .wrapper
+          .test
+            posted #{time_ago_in_words(@post.created_at)}

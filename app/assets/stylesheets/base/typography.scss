@@ -39,7 +39,7 @@
 }
 
 :root {
-  @include responsive-font(1vw, 16px, 30px);
+  @include responsive-font(1vw, 16px, 24px);
 }
 body,
 input,
